@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/project/js/script.js" defer></script>
+    <link rel="stylesheet" href="/project/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="klock-container">
+            <div class="klock-div">
+                <p id="klocka"></p>
+            </div>
+        </div>
+        <div class="dashboard">
+            <input class="namn" type="text" autocapitalize="characters" placeholder="DITTNAMN">
+            <div class="cards">
+                <div class="dash-card">
+                    <h2>Snabblänkar</h2>
+                    <div id="länk-container">
+                    <div class="länkar">
+                        <a href="https://www.google.com" target="_blank">Google</a>
+                        <button class="remove-btn" onclick="removeLink()">X</button>
+                    </div>
+                    <div class="länkar">
+                        <a href="https://www.notion.com/" target="_blank">Notion</a>
+                        <button class="remove-btn" onclick="removeLink()">X</button>
+                    </div>
+                    <div class="länkar">
+                        <a href="https://chatgpt.com/" target="_blank">Chat GPT</a>
+                        <button class="remove-btn" onclick="removeLink()">X</button>
+                    </div>
+                    <div class="länkar">
+                        <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+                        <button class="remove-btn" onclick="removeLink()">X</button>
+                    </div>
+                </div>
+                    <div class="lägg-till-länk">
+                        <p id="add-link-button">Lägg till länk</p>
+                        <div id="gömd-länk" >
+                            <input type="text" id="site-name" placeholder="Hemsidans namn">
+                            <input type="text" id="site-url" placeholder="Länk till hemsidan">
+                            <button id="save-link">Spara</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <h2>Dagens väder</h2>
+                    <div class="väder" id="weather-today"></div>
+                    <div class="väder" id="weather-tomorrow"></div>
+                    <div class="väder" id="weather-overmorrow"></div>
+                </div>
+                <div class="dash-card">
+                    <h2>Senaste nyheterna</h2>
+                    <div id="nyheter">
+
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <h2>Anteckningar</h2>
+                    <textarea class="anteckning"></textarea>
+                </div>
+            </div>
+            <div class="footer-btn">
+                <button id="bakgrund-button" onclick="slumpaBakgrund()">Slumpa bakgrundsbild</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,312 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-color: #ccc;
+}
+
+h2 {
+    font-weight: lighter;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.klock-div {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color:rgba(255, 255, 255, 0.655);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.klock-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.dash-card {
+    background-color: rgba(255, 255, 255, 0.655);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(1px); /*Safari-stöd*/
+}
+
+.dash-card a {
+    color: black;
+    text-decoration: none;
+}
+
+#länk-container {
+    margin: 10px;
+    width: 100%;
+    max-height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.länkar, .väder {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.899);
+    height: 50px;
+    min-height: 50px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.väder h4{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.väder p {
+    font-size: 15px;
+}
+
+.nyhet {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.899);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 5px;
+    flex-direction: column;
+    min-height: 50px;
+    max-height: 70px;
+}
+
+.rubrik-nyhet {
+    display: block;
+}
+
+#nyheter {
+    margin: 20px;
+    width: 100%;
+    max-height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.nyhet h4 {
+    font-weight: normal;
+}
+.nyhet p {
+    font-size: 10px;
+}
+
+.lägg-till-länk {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.899);
+    height: 30px;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow:visible;
+    margin-bottom: 20px;
+}
+
+#bakgrund-button {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.655);
+    border: none;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#bakgrund-button:hover, .lägg-till-länk:hover {
+    background-color: rgba(228, 223, 223, 0.614);
+}
+
+#add-link-button {
+    position: absolute;
+    z-index: 1;
+}
+
+.gömd-länk {
+    display: none;
+    background-color: rgba(251, 248, 248, 0.845);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+#gömd-länk {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    width: 200px;
+    max-width: 500px;
+    z-index: 2;
+}
+
+.gömd-länk.show {
+    display: block;
+    opacity: 1;
+}
+
+.lägg-till-länk p {
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.lägg-till-länk input {
+    margin: 2px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 20%);
+}
+
+#save-link {
+    padding: 5px;
+    border: none;
+    background-color: #b3b0b0;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#save-link:hover {
+    background-color: #828181;
+}
+
+.remove-btn {
+    border-radius: 50%;
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(228, 228, 228, 0.777);
+    color: black;
+    border: none;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 7px;
+    cursor: pointer;
+} 
+
+.länkar:hover {
+    .remove-btn {
+        display: flex;
+    }
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.väder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.länkar a:hover {
+    color: rgb(134, 132, 132);
+}
+
+.namn {
+    background: none;
+    font-size: 50px;
+    border: none;
+    color: rgba(255, 255, 255, 0.904);
+    max-width: 500px;
+    text-align: center;
+    overflow: visible;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.anteckning {
+    height: 300px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.899);
+    border: none;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 720px){
+    .namn {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .namn {
+        max-width: 350px;
+    }
+}
